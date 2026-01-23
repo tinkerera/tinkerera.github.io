@@ -5,13 +5,50 @@
  * ================================================
  */
 
+// Career start date (first professional job - June 2024)
+const CAREER_START_DATE = new Date('2024-06-01');
+
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
+    initDynamicStats();
     initNavigation();
     initParticles();
     initScrollEffects();
     initFadeAnimations();
 });
+
+/**
+ * Calculate and display dynamic statistics
+ */
+function initDynamicStats() {
+    // Calculate years of experience (round up)
+    const now = new Date();
+    const yearsExp = Math.ceil((now - CAREER_START_DATE) / (1000 * 60 * 60 * 24 * 365));
+    const yearsDisplay = yearsExp + '+';
+
+    const yearsEl = document.getElementById('years-experience');
+    if (yearsEl) yearsEl.textContent = yearsDisplay;
+
+    // Count realms conquered (companies) - count timeline items excluding education
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    let companyCount = 0;
+    timelineItems.forEach(item => {
+        // Check if it's not education (doesn't have graduation emoji)
+        const marker = item.querySelector('.timeline-marker');
+        if (marker && !marker.textContent.includes('🎓')) {
+            companyCount++;
+        }
+    });
+
+    const realmsEl = document.getElementById('realms-conquered');
+    if (realmsEl) realmsEl.textContent = companyCount;
+
+    // Count sacred scrolls (certificates)
+    const certCards = document.querySelectorAll('.cert-card');
+    const certsEl = document.getElementById('sacred-scrolls');
+    if (certsEl) certsEl.textContent = certCards.length;
+}
+
 
 /**
  * Navigation functionality
