@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Adem Yildirim - Backend-focused Software Engineer building scalable and reliable backend systems. Portfolio inspired by Nordic fantasy themes.">
+    <meta name="keywords"
+        content="Software Engineer, Backend Developer, Python, TypeScript, Node.js, AWS, Azure, Cloud">
+    <meta name="author" content="Adem Yildirim">
+    <title>Adem Yildirim | The Dragonborn of Code</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=MedievalSharp&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">⚔ Adem Yildirim</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">Chronicle</a></li>
+                <li><a href="#skills">Abilities</a></li>
+                <li><a href="#experience">Quests</a></li>
+                <li><a href="#certifications">Achievements</a></li>
+                <li><a href="#contact">Summon</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="particles" id="particles"></div>
+
+        <div class="hero-content">
+            <p class="hero-subtitle">⚔ A Legend Awakens ⚔</p>
+            <h1 class="hero-title">
+                <span class="highlight">Adem Yildirim</span>
+            </h1>
+            <p class="hero-description">
+                Backend-focused Software Engineer forging scalable and reliable systems through the arcane arts of
+                <span class="text-frost">Python</span>, <span class="text-frost">TypeScript</span>, and <span
+                    class="text-frost">Node.js</span>.
+                A wanderer between the realms of <strong>AWS</strong> and <strong>Azure</strong>, crafting spells of
+                automation and infrastructure.
+            </p>
+            <div class="hero-cta">
+                <a href="#experience" class="btn btn-primary">View My Quests</a>
+                <a href="./cv.pdf" download class="btn btn-primary btn-download">📜 CV</a>
+                <a href="#contact" class="btn btn-primary">Send a Raven</a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll to Explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">The Chronicle</h2>
+
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="about-image-frame">
+                        <img src="./unnamed.jpg" alt="Adem Yildirim" class="profile-image">
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <h3>— A Tale of Code and Cloud —</h3>
+                    <p>
+                        Greetings, traveler. I am <strong>Adem Yildirim</strong>, a <span class="text-frost">Software
+                            Engineer</span>
+                        at <strong>Siemens</strong> and a Mathematical Engineering student at <strong>Yildiz Technical
+                            University</strong>.
+                        My journey through the digital realms has led me to master the ancient arts of backend
+                        development and cloud architecture.
+                    </p>
+                    <p>
+                        I design and maintain <span class="text-frost">RESTful APIs</span> and <span
+                            class="text-frost">microservices</span>,
+                        work with cloud platforms such as <strong>AWS</strong> and <strong>Azure</strong>, and wield
+                        <strong>Terraform</strong> and <strong>CloudFormation</strong> to automate infrastructure across
+                        the lands.
+                    </p>
+                    <p>
+                        My experience includes integrating backend services across internal systems, supporting
+                        <span class="text-frost">AI-driven workflows</span> through well-structured backend
+                        architectures,
+                        and delivering production-ready software with a strong focus on performance, maintainability,
+                        and real-world impact.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Years of Questing</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Realms Conquered</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Sacred Scrolls</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Abilities & Powers</h2>
+
+            <div class="skills-grid">
+                <!-- Backend Mastery -->
+                <div class="skill-category fade-in">
+                    <span class="skill-category-icon">🗡️</span>
+                    <h3>Backend Mastery</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item"><span>Python (Flask, Django)</span></li>
+                        <li class="skill-item"><span>TypeScript / Node.js</span></li>
+                        <li class="skill-item"><span>Go (Golang)</span></li>
+                        <li class="skill-item"><span>RESTful APIs</span></li>
+                    </ul>
+                </div>
+
+                <!-- Cloud Sorcery -->
+                <div class="skill-category fade-in">
+                    <span class="skill-category-icon">☁️</span>
+                    <h3>Cloud Sorcery</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item"><span>AWS (Lambda, ECS, S3, RDS)</span></li>
+                        <li class="skill-item"><span>Azure Cloud</span></li>
+                        <li class="skill-item"><span>Terraform</span></li>
+                        <li class="skill-item"><span>CloudFormation</span></li>
+                    </ul>
+                </div>
+
+                <!-- DevOps Arts -->
+                <div class="skill-category fade-in">
+                    <span class="skill-category-icon">⚙️</span>
+                    <h3>DevOps Arts</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item"><span>Docker & Containers</span></li>
+                        <li class="skill-item"><span>CI/CD Pipelines</span></li>
+                        <li class="skill-item"><span>Jenkins / GitHub Actions</span></li>
+                        <li class="skill-item"><span>Kubernetes (EKS)</span></li>
+                    </ul>
+                </div>
+
+                <!-- Database Wisdom -->
+                <div class="skill-category fade-in">
+                    <span class="skill-category-icon">📜</span>
+                    <h3>Database Wisdom</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item"><span>PostgreSQL</span></li>
+                        <li class="skill-item"><span>DynamoDB</span></li>
+                        <li class="skill-item"><span>RDS / S3</span></li>
+                    </ul>
+                </div>
+
+                <!-- AI & LLM Integration -->
+                <div class="skill-category fade-in">
+                    <span class="skill-category-icon">🔮</span>
+                    <h3>AI & LLM Magic</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item"><span>LLM Integration</span></li>
+                        <li class="skill-item"><span>Machine Learning</span></li>
+                        <li class="skill-item"><span>AI Automation</span></li>
+                    </ul>
+                </div>
+
+                <!-- Enterprise Systems -->
+                <div class="skill-category fade-in">
+                    <span class="skill-category-icon">🛡️</span>
+                    <h3>Enterprise Systems</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item"><span>ServiceNow</span></li>
+                        <li class="skill-item"><span>Microsoft Ecosystem</span></li>
+                        <li class="skill-item"><span>System Integration</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">The Quest Log</h2>
+
+            <div class="timeline">
+                <!-- Siemens - Highlighted as Main Quest -->
+                <div class="timeline-item fade-in featured-quest">
+                    <div class="timeline-marker">⚔</div>
+                    <div class="timeline-content siemens-highlight">
+                        <div class="featured-badge">⭐ Current Main Quest ⭐</div>
+                        <span class="timeline-date">March 2025 - Present</span>
+                        <h3 class="timeline-title">Software Engineer (Backend & Cloud)</h3>
+                        <p class="timeline-company">Siemens</p>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Backend-oriented Software Engineer within AI teams, building scalable, reliable
+                                    systems using <strong>Python</strong>, <strong>TypeScript</strong>, and
+                                    <strong>Node.js</strong> with focus on AI-powered architectures.
+                                </li>
+                                <li>Designing and maintaining <strong>RESTful APIs</strong> and backend services that
+                                    power AI features, internal platforms, and enterprise integrations.</li>
+                                <li>Cloud-native development on <strong>Azure</strong> and <strong>AWS</strong> for
+                                    AI-centric systems — infrastructure design, deployment, security, and networking.
+                                </li>
+                                <li>Infrastructure as Code with <strong>Terraform</strong> and
+                                    <strong>CloudFormation</strong>, building production-grade CI/CD pipelines.
+                                </li>
+                                <li>Designing and scaling <strong>Large Language Model (LLM)</strong> capabilities
+                                    including intelligent automation and AI-assisted decision logic.</li>
+                                <li>Cross-functional collaboration, connecting backend services with AI components and
+                                    enterprise tools across multiple departments.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PERCON - Shortened -->
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker">🛡</div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Aug 2024 - Jan 2025</span>
+                        <h3 class="timeline-title">Software Engineer</h3>
+                        <p class="timeline-company">PERCON A.S.</p>
+                        <div class="timeline-description">
+                            <p>Deployed scalable microservices on AWS using Python and Node.js. Implemented CI/CD
+                                pipelines with Jenkins and GitHub Actions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ziraat Teknoloji - Shortened -->
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker">📜</div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Jun - Jul 2024</span>
+                        <h3 class="timeline-title">Software Engineer Intern</h3>
+                        <p class="timeline-company">Ziraat Teknoloji</p>
+                        <div class="timeline-description">
+                            <p>Backend development with Python/Django. Optimized PostgreSQL queries for banking systems.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker">🎓</div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">October 2021 - June 2026</span>
+                        <h3 class="timeline-title">Mathematical Engineering</h3>
+                        <p class="timeline-company">Yildiz Technical University</p>
+                        <div class="timeline-description">
+                            <p>Pursuing a degree in Mathematical Engineering, combining advanced mathematics with
+                                computational problem-solving.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications" id="certifications">
+        <div class="container">
+            <h2 class="section-title">Sacred Achievements</h2>
+
+            <div class="certs-grid">
+                <div class="cert-card fade-in">
+                    <span class="cert-icon">🐳</span>
+                    <h3>Docker Foundations Professional Certificate</h3>
+                    <p class="cert-issuer">Docker</p>
+                </div>
+
+                <div class="cert-card fade-in">
+                    <span class="cert-icon">💼</span>
+                    <h3>Software Engineer Intern Certificate</h3>
+                    <p class="cert-issuer">Professional</p>
+                </div>
+
+                <div class="cert-card fade-in">
+                    <span class="cert-icon">☁️</span>
+                    <h3>IBM DevOps Professional Certificate</h3>
+                    <p class="cert-issuer">IBM</p>
+                </div>
+
+                <div class="cert-card fade-in">
+                    <span class="cert-icon">🌩️</span>
+                    <h3>AWS Cloud Practitioner Essentials</h3>
+                    <p class="cert-issuer">Amazon Web Services</p>
+                </div>
+
+                <div class="cert-card fade-in">
+                    <span class="cert-icon">🤖</span>
+                    <h3>Machine Learning</h3>
+                    <p class="cert-issuer">Professional Certification</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section class="languages" id="languages"
+        style="background: var(--color-void); padding: var(--space-lg) var(--space-md);">
+        <div class="container">
+            <h2 class="section-title">Tongues of the Realm</h2>
+
+            <div class="certs-grid" style="max-width: 800px; margin: var(--space-lg) auto 0;">
+                <div class="cert-card fade-in">
+                    <span class="cert-icon">🇹🇷</span>
+                    <h3>Turkish</h3>
+                    <p class="cert-issuer">Native / Bilingual</p>
+                </div>
+
+                <div class="cert-card fade-in">
+                    <span class="cert-icon">🇬🇧</span>
+                    <h3>English</h3>
+                    <p class="cert-issuer">Professional Working</p>
+                </div>
+
+                <div class="cert-card fade-in">
+                    <span class="cert-icon">🇩🇪</span>
+                    <h3>German</h3>
+                    <p class="cert-issuer">Elementary</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Summon the Dragonborn</h2>
+
+            <div class="contact-content">
+                <p class="contact-intro">
+                    Seek my counsel for your next quest? Send a raven, and I shall answer your call.
+                    Whether it be <span class="text-frost">backend architecture</span>,
+                    <span class="text-frost">cloud infrastructure</span>, or
+                    <span class="text-frost">AI integration</span>,
+                    together we shall forge legendary systems.
+                </p>
+
+                <div class="contact-methods">
+                    <a href="mailto:yadem5193@gmail.com" class="contact-method">
+                        <span class="contact-method-icon">📧</span>
+                        <h3>Raven Mail</h3>
+                        <span>yadem5193@gmail.com</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/ademyildirm" target="_blank" rel="noopener"
+                        class="contact-method">
+                        <span class="contact-method-icon">🔗</span>
+                        <h3>Guild Network</h3>
+                        <span>linkedin.com/in/ademyildirm</span>
+                    </a>
+
+                    <a href="https://github.com/Tinkerera" target="_blank" rel="noopener" class="contact-method">
+                        <span class="contact-method-icon">⚔️</span>
+                        <h3>Code Archives</h3>
+                        <span>github.com/Tinkerera</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">⚔ Adem Yildirim ⚔</div>
+
+            <div class="footer-links">
+                <a href="#about">Chronicle</a>
+                <a href="#skills">Abilities</a>
+                <a href="#experience">Quests</a>
+                <a href="#contact">Summon</a>
+            </div>
+
+            <p class="footer-quote">
+                "I used to be an adventurer like you, then I became a Software Engineer."
+            </p>
+
+            <p class="footer-copy">
+                © 2026 Adem Yildirim. Forged in Istanbul. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="index.js"></script>
+</body>
+
+</html>
