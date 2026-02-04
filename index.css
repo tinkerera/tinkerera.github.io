@@ -558,7 +558,7 @@ section {
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -650,7 +650,7 @@ section {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-md);
     margin-top: var(--space-lg);
 }
@@ -1014,7 +1014,7 @@ section {
 }
 
 .contact-content {
-    max-width: 700px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -1026,7 +1026,7 @@ section {
 
 .contact-methods {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-md);
     margin-top: var(--space-lg);
 }
@@ -1078,7 +1078,7 @@ section {
 }
 
 .footer-content {
-    max-width: 700px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
