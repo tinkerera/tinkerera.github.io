@@ -1,6 +1,6 @@
 /**
  * ================================================
- * SKYRIM-INSPIRED PORTFOLIO - JavaScript
+ * PROFESSIONAL PORTFOLIO - JavaScript
  * Interactive effects and animations
  * ================================================
  */
@@ -23,13 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
 function initDynamicStats() {
     // Calculate years of experience (round up)
     const now = new Date();
-    const yearsExp = Math.ceil((now - CAREER_START_DATE) / (1000 * 60 * 60 * 24 * 365));
+    const yearsExp = Math.floor((now - CAREER_START_DATE) / (1000 * 60 * 60 * 24 * 365));
     const yearsDisplay = yearsExp + '+';
 
     const yearsEl = document.getElementById('years-experience');
     if (yearsEl) yearsEl.textContent = yearsDisplay;
 
-    // Count realms conquered (companies) - count timeline items excluding education
+    // Count companies - count timeline items excluding education
     const timelineItems = document.querySelectorAll('.timeline-item');
     let companyCount = 0;
     timelineItems.forEach(item => {
@@ -43,7 +43,7 @@ function initDynamicStats() {
     const realmsEl = document.getElementById('realms-conquered');
     if (realmsEl) realmsEl.textContent = companyCount;
 
-    // Count sacred scrolls (certificates)
+    // Count certifications
     const certCards = document.querySelectorAll('.cert-card');
     const certsEl = document.getElementById('sacred-scrolls');
     if (certsEl) certsEl.textContent = certCards.length;
@@ -59,7 +59,6 @@ function initNavigation() {
     const navLinks = document.getElementById('navLinks');
 
     // Navbar scroll effect
-    let lastScroll = 0;
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
 
@@ -69,8 +68,6 @@ function initNavigation() {
         } else {
             navbar.classList.remove('scrolled');
         }
-
-        lastScroll = currentScroll;
     });
 
     // Mobile menu toggle
@@ -123,20 +120,20 @@ function initNavigation() {
 }
 
 /**
- * Create floating snowflake effects in hero section (Frozen Tundra)
+ * Create floating particle effects in hero section
  */
 function initParticles() {
     const particlesContainer = document.getElementById('particles');
     if (!particlesContainer) return;
 
-    const particleCount = 40; // More snowflakes
+    const particleCount = 30;
 
     for (let i = 0; i < particleCount; i++) {
-        createSnowflake(particlesContainer, i);
+        createParticle(particlesContainer, i);
     }
 }
 
-function createSnowflake(container, index) {
+function createParticle(container, index) {
     const particle = document.createElement('div');
     particle.classList.add('particle');
 
@@ -144,35 +141,35 @@ function createSnowflake(container, index) {
     particle.style.left = Math.random() * 100 + '%';
 
     // Random animation delay for staggered effect
-    particle.style.animationDelay = (Math.random() * 10) + 's';
+    particle.style.animationDelay = (Math.random() * 12) + 's';
 
-    // Random animation duration for varied fall speeds
-    particle.style.animationDuration = (Math.random() * 5 + 6) + 's';
+    // Random animation duration for varied speeds
+    particle.style.animationDuration = (Math.random() * 6 + 8) + 's';
 
-    // Random size (snowflakes vary in size)
-    const size = Math.random() * 5 + 2;
+    // Random size
+    const size = Math.random() * 4 + 2;
     particle.style.width = size + 'px';
     particle.style.height = size + 'px';
 
-    // Frozen Tundra colors - whites, ice blues, silver
+    // Professional blue color variations
     const colorChoice = Math.random();
     let color, glow;
 
     if (colorChoice > 0.6) {
-        // Pure white snow
-        const opacity = Math.random() * 0.4 + 0.4;
-        color = `rgba(248, 251, 255, ${opacity})`;
-        glow = '0 0 8px rgba(248, 251, 255, 0.6)';
-    } else if (colorChoice > 0.3) {
-        // Crystal ice
-        const opacity = Math.random() * 0.4 + 0.3;
-        color = `rgba(212, 234, 245, ${opacity})`;
-        glow = '0 0 10px rgba(212, 234, 245, 0.5)';
-    } else {
-        // Frost blue
+        // Primary blue
         const opacity = Math.random() * 0.3 + 0.3;
-        color = `rgba(126, 200, 227, ${opacity})`;
-        glow = '0 0 12px rgba(126, 200, 227, 0.4)';
+        color = `rgba(59, 130, 246, ${opacity})`;
+        glow = '0 0 8px rgba(59, 130, 246, 0.4)';
+    } else if (colorChoice > 0.3) {
+        // Accent cyan
+        const opacity = Math.random() * 0.3 + 0.25;
+        color = `rgba(6, 182, 212, ${opacity})`;
+        glow = '0 0 10px rgba(6, 182, 212, 0.35)';
+    } else {
+        // Light blue highlight
+        const opacity = Math.random() * 0.25 + 0.2;
+        color = `rgba(56, 189, 248, ${opacity})`;
+        glow = '0 0 12px rgba(56, 189, 248, 0.3)';
     }
 
     particle.style.background = color;
@@ -196,8 +193,8 @@ function initScrollEffects() {
         if (hero) {
             const heroContent = hero.querySelector('.hero-content');
             if (heroContent && scrolled < window.innerHeight) {
-                heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
-                heroContent.style.opacity = 1 - (scrolled * 0.002);
+                heroContent.style.transform = `translateY(${scrolled * 0.25}px)`;
+                heroContent.style.opacity = 1 - (scrolled * 0.0015);
             }
         }
     });
@@ -249,7 +246,7 @@ function initFadeAnimations() {
 
                 setTimeout(() => {
                     entry.target.classList.add('visible');
-                }, index * 100);
+                }, index * 80);
 
                 observer.unobserve(entry.target);
             }
@@ -262,127 +259,21 @@ function initFadeAnimations() {
 }
 
 /**
- * Typing effect for hero subtitle (optional enhancement)
- */
-function typeWriter(element, text, speed = 50) {
-    let i = 0;
-    element.textContent = '';
-
-    function type() {
-        if (i < text.length) {
-            element.textContent += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-
-    type();
-}
-
-/**
- * Add hover sound effect (optional - requires audio files)
- */
-function addHoverSound(selector, soundUrl) {
-    const elements = document.querySelectorAll(selector);
-    const audio = new Audio(soundUrl);
-    audio.volume = 0.2;
-
-    elements.forEach(element => {
-        element.addEventListener('mouseenter', () => {
-            audio.currentTime = 0;
-            audio.play().catch(() => { }); // Catch autoplay restrictions
-        });
-    });
-}
-
-/**
- * Easter egg - Konami code for dragon shout
- */
-const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
-    'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight',
-    'KeyB', 'KeyA'];
-let konamiIndex = 0;
-
-document.addEventListener('keydown', (e) => {
-    if (e.code === konamiCode[konamiIndex]) {
-        konamiIndex++;
-        if (konamiIndex === konamiCode.length) {
-            activateDragonShout();
-            konamiIndex = 0;
-        }
-    } else {
-        konamiIndex = 0;
-    }
-});
-
-function activateDragonShout() {
-    // Create dragon shout effect - Frozen Tundra style
-    const shout = document.createElement('div');
-    shout.innerHTML = '<span style="font-size: 4rem;">🐉</span><br>FUS RO DAH!';
-    shout.style.cssText = `
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-family: 'Cinzel', serif;
-        font-size: 3rem;
-        color: #d4eaf5;
-        text-shadow: 0 0 30px rgba(212, 234, 245, 0.8), 0 0 60px rgba(126, 200, 227, 0.5);
-        z-index: 10000;
-        animation: shoutEffect 2s ease-out forwards;
-        text-align: center;
-    `;
-
-    // Add animation keyframes
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes shoutEffect {
-            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
-            30% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
-            100% { opacity: 0; transform: translate(-50%, -50%) scale(2); }
-        }
-    `;
-    document.head.appendChild(style);
-
-    document.body.appendChild(shout);
-
-    // Screen shake effect (frost storm)
-    document.body.style.animation = 'shake 0.5s ease-out';
-    const shakeStyle = document.createElement('style');
-    shakeStyle.textContent = `
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-            20%, 40%, 60%, 80% { transform: translateX(5px); }
-        }
-    `;
-    document.head.appendChild(shakeStyle);
-
-    setTimeout(() => {
-        shout.remove();
-        document.body.style.animation = '';
-    }, 2000);
-}
-
-/**
- * Console greeting for developers - Frozen Tundra Edition
+ * Console greeting for developers
  */
 console.log(`
-%c❄️ Welcome, Dragonborn Developer ❄️
+%c👋 Hello, Developer!
 
-%cYou've discovered the frozen source of Adem Yıldırım's portfolio.
+%cYou've found Adem Yildirim's portfolio source code.
 
-"In the land of code, where the cold winds blow,
-A Backend Engineer through ice and snow,
-Through AWS clouds and Azure's frozen might,
-Building systems that scale through polar night."
+I'm a Backend Engineer passionate about building 
+scalable systems with Python, TypeScript, and Cloud technologies.
 
-Want to collaborate? Send a raven to: yadem5193@gmail.com
+Want to connect? Email: yadem5193@gmail.com
 
-%c✨ May your code compile on the first try! ✨
+%c✨ Happy coding! ✨
 `,
-    'font-size: 20px; color: #7ec8e3; font-weight: bold;',
-    'font-size: 12px; color: #8fa4b8; font-style: italic;',
-    'font-size: 14px; color: #d4eaf5;'
+    'font-size: 18px; color: #3b82f6; font-weight: bold;',
+    'font-size: 12px; color: #94a3b8;',
+    'font-size: 14px; color: #06b6d4;'
 );
-
